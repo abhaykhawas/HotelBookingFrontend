@@ -3,9 +3,9 @@
     width: 100%;
     justify-content: space-between;
     margin-top: 40px;
-    background-color: black;
-    color: white;
-    box-shadow: 0 3px 10px rgba(241, 47, 47, 0.8);
+    background-color: var(--fg);
+    color: var(--bg);
+    box-shadow: 0 3px 10px var(--accent);
     border-radius: 30px;
     padding: 20px 10px;
 }
@@ -27,7 +27,7 @@
 }
 
 .navbar-links-container a {
-    color: white;
+    color: var(--bg);
     text-decoration: none;
     padding-bottom: 2px;
     border-bottom: 3px solid transparent;
@@ -35,4 +35,13 @@
 
 .navbar-links-container a:hover{
     border-bottom: 3px solid;
+}
+
+.theme-toggle{
+    background: transparent;
+    color: var(--bg);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
 }
