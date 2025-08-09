@@ -5,11 +5,13 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Listing from './Pages/Listings/Listing'
 import Bookings from './Pages/Booking/Bookings'
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
   return (
     <div className='container'>
+      <ToastContainer/>
       <Navbar/>
 
       <Routes>

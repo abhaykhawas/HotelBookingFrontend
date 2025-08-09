@@ -58,11 +58,14 @@
 
 .book-modal-container{
     position: absolute;
-    margin-top: 20%;
-    background: rgba(128, 128, 128, 0.12);
+    margin-top: 15%;
+    background: rgb(255, 255, 255);
     border: 1px solid rgba(128, 128, 128, 0.2);
     padding: 10px;
-    margin-left: 30%;
+    margin-left: 25%;
+    z-index: 99;
+    border-radius: 8px;
+    width: 350px;
 }
 
 .close-modal-container{text-align: end;}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HotelContext from "./HotelContext";
+import { toast } from 'react-toastify';
 
 const sampleHotels = [
   { id: 1, name: 'Grand Palace Hotel', price: 120, location: 'New York' },
@@ -60,11 +61,14 @@ const HotelProvider = ({children}) => {
     const [bookings, setBookings] = useState([])
 
     const bookHotel = (hotel, from, to) => {
+        console.log([...bookings, { ...hotel, from, to, bookingId: Date.now() }])
         setBookings([...bookings, { ...hotel, from, to, bookingId: Date.now() }])
+        toast.success('Booking successfully done !!!')
     }
 
     const deleteBooking = (bookingId) => {
         setBookings(bookings.filter((booking) => booking.bookingId !== bookingId))
+        toast.error("Booking deleted !!")
     }
 
     return(
